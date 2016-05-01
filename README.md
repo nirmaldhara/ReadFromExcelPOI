@@ -20,44 +20,27 @@ package com.javaant;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.DecimalFormat;
-import java.util.Date;
 import java.util.Iterator;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFCellStyle;
-import org.apache.poi.xssf.usermodel.XSSFFont;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-/**
- *
- * @author nirmal
- */
-public class WriteToExcel {
+public class ReadFromEXcel {
+
 
 	static String filepath = null;
 	static Object[][] data = null;
 
 	public static void main(String ar[]) {
-		WriteToExcel rw = new WriteToExcel("D:\\Java_Ant_Post\\readWritexls-poi\\ReadWriteExcel\\excels\\abc.xlsx");
+		ReadFromEXcel rw = new ReadFromEXcel("D:\\Java_Ant_Post\\readWritexls-poi\\ReadWriteExcel\\excels\\abc.xlsx");
 		data = rw.readDataFromExcel();
 		// rw.readDataFromExcel();
 
 	}
 
-	public WriteToExcel(String filepath) {
+	public ReadFromEXcel(String filepath) {
 		this.filepath = filepath;
 	}
 
@@ -114,6 +97,8 @@ public class WriteToExcel {
 
 	}
 
+	
 }
+
 
 ```
